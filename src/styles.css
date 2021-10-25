@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Grand+Hotel&display=swap');
+
+:root {
+  --clr-primary-1: hsl(205, 89%, 68%);
+  --clr-primary-2: hsl(205, 67%, 89%);
+  --clr-primary-3: hsl(205, 78%, 60%);
+  --clr-primary-4: hsl(204, 91%, 83%);
+  --clr-grey: hsl(210, 1%, 36%);
+  --clr-blue: hsl(209, 76%, 42%);
+  --clr-gold: hsl(44, 88%, 49%);
+  --clr-white: #fff;
+  --clr-black: #222;
+  --spacing: 0.1rem;
+  --transition: all 0.3s linear;
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --ff-primary: 'Grand Hotel', cursive;
+  --ff-primary2: 'Great Vibes', cursive;
+  --ff-secondary: 'Roboto', sans-serif;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-primary-4);
+  color: var(--clr-primary-3);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+h3 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h3 {
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 800px) {
+  h3 {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+  body {
+    font-size: 1rem;
+  }
+}
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 35rem;
+  margin-top: 8rem;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+/*
+=============== 
+Grocery List
+===============
+*/
+.section-center {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  padding: 2rem;
+}
+.section-center:hover {
+  box-shadow: var(--dark-shadow);
+}
+.alert {
+  margin-bottom: 1rem;
+  height: 1.25rem;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  font-size: 0.7rem;
+  border-radius: 0.25rem;
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+}
+.alert-danger {
+  color: var(--clr-blue);
+  background: #f8d7da;
+}
+.alert-success {
+  color: var(--clr-blue);
+  background: var(--clr-gold);
+}
+.grocery-form h3 {
+  color: var(--clr-primary-1);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.form-control {
+  display: flex;
+  justify-content: center;
+}
+.grocery {
+  padding: 0.25rem;
+  padding-left: 1rem;
+  background: var(--clr-primary-2);
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+  border-color: transparent;
+  font-size: 1rem;
+  flex: 1 0 auto;
+  color: var(--clr-gold);
+}
+.grocery::placeholder {
+  font-family: var(--ff-primary);
+  color: var(--clr-gold);
+}
+.submit-btn {
+  background: var(--clr-primary-4);
+  border-color: transparent;
+  flex: 0 0 5rem;
+  display: grid;
+  align-items: center;
+  padding: 0.25rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.85rem;
+}
+.submit-btn:hover {
+  background: var(--clr-primary-1);
+  color: var(--clr-white);
+}
+.grocery-container {
+  margin-top: 2rem;
+  transition: var(--transition);
+}
+.grocery-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  transition: var(--transition);
+  padding: 0.25rem 1rem;
+  border-radius: var(--radius);
+  text-transform: capitalize;
+  font-family: var(--ff-primary);
+}
+.grocery-item:hover {
+  color: var(--clr-blue);
+  background: var(--clr-primary-2);
+}
+.grocery-item:hover .title {
+  color: var(--clr-grey-5);
+}
+.title {
+  margin-bottom: 0;
+  letter-spacing: 2px;
+  transition: var(--transition);
+}
+.edit-btn,
+.delete-btn {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin: 0 0.15rem;
+  transition: var(--transition);
+}
+.edit-btn {
+  color: var(--clr-primary-3);
+}
+.edit-btn:hover {
+  color: var(--clr-gold);
+}
+.delete-btn {
+  color: var(--clr-primary-3);
+}
+.delete-btn:hover {
+  color: var(--clr-gold);
+}
+.clear-btn {
+  text-transform: capitalize;
+  width: 10rem;
+  height: 1.5rem;
+  display: grid;
+  align-items: center;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-3);
+  margin: 0 auto;
+  font-size: 0.85rem;
+  letter-spacing: var(--spacing);
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 1.25rem;
+}
+.clear-btn:hover {
+  color: var(--clr-gold);
+}
